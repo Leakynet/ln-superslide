@@ -15,5 +15,11 @@ const Template: Story<ButtonProps> = (args) => <Button {...args} />;
 
 export const Default = Template.bind({});
 Default.args = {
-
+  primary: false
 };
+
+export const Disabled = Template.bind({});
+Disabled.args = {
+  primary: false,
+  disabled: true
+}
