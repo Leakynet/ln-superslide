@@ -1,0 +1,29 @@
+$toast-background: $dark;
+$toast-border-radius: .25rem;
+$toast-color: $white;
+
+
+.toast {
+    background: $toast-background;
+    border-radius: $toast-border-radius;
+    color: $toast-color;
+    @include standard-box-shadow;
+    &-header {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        padding: .5rem .5rem .125rem .5rem;
+        h4 {
+            flex: 1 1 auto;
+        }
+        .toast-dismiss {
+            flex: 0 0 1.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    }
+    &-content {
+        padding: .5rem;
+    }
+}

@@ -1,0 +1,81 @@
+/* 
+    Button Component
+*/
+
+// Button Variables: These mostly inherit from the defaults
+$button-background-color: $secondary;
+$button-border-color: $dark;
+$button-border-radius: $border-radius;
+$button-border-width: .0625rem;
+$button-font-size: $default-font-size;
+$button-font-weight: $default-font-weight;
+$button-font-color: $dark;
+$button-padding-top: .25rem;
+$button-padding-right: 1rem;
+$button-padding-bottom: $button-padding-top;
+$button-padding-left: $button-padding-right;
+
+@mixin button-inset-shadow {
+    box-shadow: 0 .0625rem 0 transparentize($white, .3) inset;
+}
+
+.button {
+    background-color: $button-background-color;
+    font-size: $button-font-size;
+    color: $button-font-color;
+    font-weight: $button-font-weight;
+    border: $button-border-width solid $button-border-color;
+    border-radius: $button-border-radius;
+    padding: $button-padding-top $button-padding-right $button-padding-bottom $button-padding-left;
+    cursor: pointer;
+    transition: all .2s ease-in-out;
+    @include button-inset-shadow;
+    &:disabled {
+        opacity: .5;
+        pointer-events: none;
+    }
+    &:focus {
+        box-shadow: 0 0 .0625rem .125rem transparentize($button-border-color, .3);
+        outline: none;
+    }
+
+    @each $color, $value in $theme {
+        &-#{$color} {
+            background-color: $value;
+            border-color: darken($value, 10%);
+            color: set-button-color($value);
+            &:hover {
+                background-color: lighten($value, 15%);
+            }
+            &:focus {
+                box-shadow: 0 0 .0625rem .125rem transparentize($value, .6);
+            }
+        }
+    }
+
+    // Link Button Type
+    &-link {
+        background-color: transparent;
+        border: none;
+        padding: 0 0 0 0;
+        color: $link-color;
+        &:hover {
+            color: darken($link-color, 15%);
+        }
+    }
+    // Text Button Type 
+    &-text {
+        background-color: transparent;
+        border: none;
+        @each $color,
+        $value in $theme {
+            &.button-#{$color} {
+                color: $value;
+                &:hover {
+                    color: lighten($value, 15%);
+                    background-color: transparent;
+                }
+            }
+        }
+    }
+}

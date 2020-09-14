@@ -1,0 +1,8 @@
+@function set-button-color($color) {
+    @if (lightness($color) >= 70) {
+        @return $dark;
+    }
+    @else {
+        @return $white;
+    }
+}

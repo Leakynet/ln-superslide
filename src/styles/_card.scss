@@ -1,0 +1,51 @@
+// Card Variables
+
+$card-border-radius: .25rem;
+$card-border-size: .0625rem;
+$card-border-color: $gray-1;
+$card-background-color: $white;
+$card-default-padding: .5rem;
+
+.card {
+    display: flex;
+    flex-direction: column;
+    background: $card-background-color;
+    border: $card-border-size solid $card-border-color;
+    border-radius: $card-border-radius;
+    @include standard-box-shadow;
+    /**
+    * Card Header
+    */
+    &-header {
+        margin-bottom: $card-default-padding;
+        padding: $card-default-padding;
+    }
+
+    /**
+    * Card Content
+    */
+
+    &-content {
+        padding: $card-default-padding;
+    }
+
+    /**
+    * Card Footer
+    */
+
+    &-footer {
+        margin-top: $card-default-padding;
+        padding: $card-default-padding;
+    }
+
+    /**
+    * Card Theme Colors
+    */
+    @each $color, $value in $theme {
+        &-#{$color} {
+            background-color: $value;
+            border-color: darken($value, 10%);
+            color: set-button-color($value);
+        }
+    }
+}

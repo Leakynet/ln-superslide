@@ -1,0 +1,67 @@
+// Superslide Variables
+$primary:  #fc8a3e !default;
+$secondary: #ECEBE4 !default;
+$success: #8ac960  !default;
+$warning: #FCEA6C  !default;
+$failure: #eb3535 !default;
+$info: #55B4EB !default;
+$light: #EEF0F2 !default;
+$dark: #3A3335 !default;
+$pink: #E76187 !default;
+$gray-1: #DADDD8 !default;
+$gray-2: #ECEBE4 !default;
+$black: #000000 !default;
+$white: #ffffff !default;
+
+$colors: (
+    "primary": $primary,
+    "secondary": $secondary,
+    "success": $success,
+    "warning": $warning,
+    "failure": $failure,
+    "info" : $info,
+    "light" : $light,
+    "dark" : $dark,
+    "accent" : $pink,
+    "gray-1" : $gray-1,
+    "gray-2" : $gray-2,
+    "black" : $black,
+    "white" : $white
+    );
+
+$theme: (
+    "primary": $primary,
+    "secondary": $secondary,
+    "success": $success,
+    "warning": $warning,
+    "failure": $failure,
+    "info" : $info,
+    "accent" : $pink,
+    "light" : $light,
+    "dark" : $dark,
+);
+
+:root {
+@each $color, $value in $colors {
+    --#{$color}: #{$value};   
+}
+}
+
+// Size Values
+$sizes: (
+    'xmall',
+    'small',
+    'medium',
+    'large',
+    'xlarge'
+);
+
+// Typography
+$font-family-sans-serif: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !default;
+$font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !default;
+$link-color: $info;
+
+// Defaults
+$border-radius: .25rem;
+$default-font-size: .875rem;
+$default-font-weight: 400;

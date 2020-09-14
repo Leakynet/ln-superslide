@@ -1,0 +1,41 @@
+$avatar-default-width: 3rem;
+$avatar-defult-height: $avatar-default-width;
+$avatar-default-border-size: .125rem;
+$avatar-default-background: $primary;
+$avatar-default-color: $white;
+$avatar-default-font-size: 1rem;
+
+.avatar {
+    width: $avatar-default-width;
+    height: $avatar-defult-height;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    border: $avatar-default-border-size solid $white;
+    background: $avatar-default-background;
+    color: $avatar-default-color;
+    font-weight: 600;
+    font-size: $avatar-default-font-size;
+    overflow: hidden;
+    @include standard-box-shadow;
+
+    &-loading {
+
+    }
+    &-image {
+        width: $avatar-default-width;
+        height: $avatar-defult-height;
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        img {
+            // FIXME - This is not really working as I want
+            max-height: 100%;
+            object-fit: contain;
+        }
+    }
+    // Avatar Sizes
+
+}

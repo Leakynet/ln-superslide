@@ -27,6 +27,12 @@ export interface ButtonProps {
     onClick?: () => void;
 }
 
+// src/components/Button.tsx
+
+/**
+ A button is just a button, but newtons are fruit and cake 
+ */
+
 export const Button: React.FC<ButtonProps> = ({
     primary = false,
     label,
@@ -38,10 +44,11 @@ export const Button: React.FC<ButtonProps> = ({
 }) => {
     return (
         <button 
-            className={`button `}
+            className={`button ${primary ? `button-primary` : `button-${theme}` } button-${type}`}
             disabled={disabled} 
-            onClick={() => onClick}>
-            I am a button
+            onClick={() => onClick} 
+            {...props}>
+            {label}
         </button>
     )
 }
