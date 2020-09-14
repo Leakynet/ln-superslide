@@ -1,44 +1,36 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Welcome to SuperSlide 🌈 💦
 
-## Available Scripts
+### What is SuperSlide?
 
-In the project directory, you can run:
+"What is SuperSlide?" you may ask. Why it is the newest and hottest react component library around (according to my wife).
 
-### `yarn start`
+### Why is SuperSlide?
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+I am glad you asked. And to that I say... "why not". Really I was just kind of bored one day while working on a project for a client and realized how bad their components were, so I figured I would start putting my own together. This is more of an exercise than anything else. I wanted to build better components and this is practice.
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
 
-### `yarn test`
+### Who is SuperSlide for?
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Short answer; me. Longer answer; anyone. 
 
-### `yarn build`
+### Can you use it? 
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+If you want to then go right ahead. Keep in mind that: 
+- __A__ - It isn't finished, 
+- _2_ - I am only going to support it as far as I neede it supported, and 
+- **_iii_** - I may never get past this commit if I am being really honest.
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+### What does it have?
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Right now, not very much. There is a button component and an avatar component and both need some work. I started adding a card component and a toast component, but those are not even at version 1.
 
-### `yarn eject`
+### What is is really for?
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+[Storybook](https://storybook.js.org/). I wanted to learn Storybook and start building components with documentation and storied for usage since it is something sorely lacking in the project I am working on right now. There is someone that is trying to add support for it, but he is on another team and I am not likley to be assigned to that task, so I wanted a way to learn.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Other Info
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+- Template - Create React App
+- Styling - Me + Sass
+- Components - Making them up as I go, but mostly the Bootstrap set of components and whatever else I add
+- Scripts - Look in the _package.json_ file, I cannot remember
