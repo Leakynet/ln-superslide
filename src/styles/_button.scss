@@ -43,7 +43,7 @@ $button-padding-left: $button-padding-right;
         &-#{$color} {
             background-color: $value;
             border-color: darken($value, 10%);
-            color: set-button-color($value);
+            color: set-color($value);
             &:hover {
                 background-color: lighten($value, 15%);
             }
